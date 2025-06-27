@@ -1,129 +1,124 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --main-color: rgb(100, 31, 100);
+    --box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.34);
+    --hover-shadow:0px 4px 4px 0px rgba(0,0,0,0.561);
+    --nav-shadow:0px 0px 10px 0px rgba(0,0,0,0.100);
+    --light-black:#141c3a;
+}
 body{
-    font-family:'Segoe UI',sans-serif;
+    font-family: "Nunito", sans-serif;
 }
-a{
-    text-decoration: none;
-}
-li{
-    list-style: none;
-}
-.navbar{
-    width: 90%;
-    margin: auto;
-}
-
-/* learn display grid again */
 .container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.nav-container{
-    padding: 20px 0;
-}
-.nav-container h1{
-    color: rgb(113, 46, 116);
-}
-.nav-container .nav{
-    display: flex;
-    justify-self: flex-end;
-}
-.nav-container .nav a{
-    margin: 0 15px;
-    color: black
-}
-.nav-container .nav .active{
-    background-color: rgb(0, 0, 0);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
+    width: 28%;
+    margin:100px auto ;
 }
 .header{
-    width: 80%;
-    margin: 70px auto;
-}
-.container img{
-    width: 95%;
-}
-.container div h3{
-    font-size: 70px;
+    font-weight: bold;
     font-family: Georgia;
+    font-size: 30px;
+    color: var(--main-color);
+    text-align: center;
 }
-.container div h3::after{
-    content: "";
-    position: absolute;
-    background:rgba(25,125,165);
-    height: 3px;
-    width: 130px;
-    top: 43%;
-    left: 15%;
+ 
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
 }
-.container div p{
-    margin: 30px 0;
+form label{
+    margin: 5px 0px;
 }
-.container div a{
-    padding: 15px;
-    background-color: #333;
-    color: #fff;
-    margin: 20px 0;
-    display: inline-block;
-    border-radius: 15px;
+form input[type="text"],input[type="password"]{
+    height: 55px;
+    margin: 5px 0;
+    border: 0.5px solid #b8b8b85d;
+    border-radius: 7px;
+    padding: 0.15px;
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
 }
-.headphone{
-    position: absolute;
-    top: -10%;
-    left: 5%;
-    opacity: 0.1;
-    z-index: -1;
-}
-.footer{
-    margin: 100px 0 0 0;
-    background-color: #333;
-    padding: 90px 90px;
-}
-.footer .main-container{
-    display:grid ;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap: 2rem;
-}
-.main-container div h4{
-    color: rgb(94, 161, 161);
+form a{
     margin: 10px 0;
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
 }
-.main-container div li{
-    color: rgb(255, 255, 255);
+form a:hover{
+    color: rgb(167, 20, 20);
+}
+form input[type=submit]{
+    height: 50px;
+    background-color: var(--main-color);
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    box-shadow: var(--box-shadow);
     cursor: pointer;
-    margin: 2px 0;
 }
-.main-container div li:hover{
-    color:rgb(113, 192, 238) ;
-}
-hr{
-    margin:10px 0;
-    opacity: 0.3;
+form input[type=submit]:hover{
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-4px);    
+    transition: 0.4s ease;
 }
 
-.privacy{
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
+
+.footer h3{
+    font-size: 20px;
+    opacity: 0.8;
 }
-.privacy{
-    color: rgb(197, 197, 177);
+.footer .images{
+    display: flex;
+    height: 9vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
 }
-.privacy p{
-    display:flex;
-    justify-content: flex-end;
+.footer .images img{
+    width: 15%;
+    border: 1px solid #e7e7e7;
+    padding: 15px;
+    border-radius: 3px;
+    transition: 0.3s ease;
 }
-.privacy a{
-    color: #ffffff;
+.footer .images img:hover{
+    box-shadow: var(--hover-shadow);
+    cursor: pointer;
+}
+.footer a{
+    float: right;
+    color: var(--main-color);
+    margin: 10px 0;
+}
+.footer a:hover{
+    color: rgb(167, 20, 20);
+}
+
+
+.headphone{
+    width: 80%;
     position: absolute;
-    top: auto;
-    left: 40%;
+    top: -15%;
+    left: 6%;
+    opacity: 0.37;
+    z-index: -1;
 }
-.privacy a:hover{
-    color: rgb(165, 146, 243);
+
+
+.privacy{
+    clear: both;
+}
+.privacy{
+    color: rgb(0, 0, 0);
+}
+.privacy:hover{
+    color: rgb(138, 23, 190);
 }
